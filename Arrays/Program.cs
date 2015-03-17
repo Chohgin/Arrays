@@ -10,14 +10,14 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int[] rolls={};
+            int[] rolls={0,0,0,0,0,0,0,0,0,0,0};
             Random dice = new Random();
 
             for (int i = 0; i < 36000; i++)
             {
-                int rollOne = dice.Next(1, 6);
-                int rollTwo = dice.Next(1, 6);
-
+                int rollOne = dice.Next(1, 7);
+                int rollTwo = dice.Next(1, 7);
+                //Console.WriteLine("{0}   {1}",rollOne, rollTwo);
                 int roll= rollOne + rollTwo;
 
                 switch (roll)
@@ -64,7 +64,7 @@ namespace Arrays
                         }
                     case 10:
                         {
-                            rolls[7]++;
+                            rolls[8]++;
                             break;
                         }
                     case 11:
@@ -92,6 +92,8 @@ namespace Arrays
             Console.WriteLine("10: {0}", rolls[8]);
             Console.WriteLine("11: {0}", rolls[9]);
             Console.WriteLine("12: {0}", rolls[10]);
+
+            Console.ReadKey();
 
             
             

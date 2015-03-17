@@ -10,7 +10,7 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int[] rolls={0,0,0,0,0,0,0,0,0,0,0};
+            int[] rolls=new int[11];
             Random dice = new Random();
 
             for (int i = 0; i < 36000; i++)

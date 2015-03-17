@@ -13,7 +13,9 @@ namespace Airplane_Seating
             bool[] seats = new bool[10];
             int index = 0;
             int indexTwo = 5;
-
+            int choice = 0;
+            while (choice != 3)
+            {
             //Menu
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("Welcome to Middle of Nowhere flights automated reservation system.");
@@ -22,9 +24,8 @@ namespace Airplane_Seating
             Console.WriteLine("2. Economy Class");
             Console.WriteLine("3. Exit");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            while (choice != 3)
-            {
+            choice = Convert.ToInt32(Console.ReadLine());
+            
                 //Switch for initial choice
                 switch (choice)
                 {
@@ -33,8 +34,10 @@ namespace Airplane_Seating
                             //assigning seating
                             if (index < 5)
                             {
+                                Console.WriteLine("Thank you for choosing First Class.");
                                 seats[index] = true;
                                 index++;
+                                choice = 0;
                             }
                             else if (index >5 && indexTwo > 10)
                             {
@@ -42,7 +45,7 @@ namespace Airplane_Seating
                                 choice = 3;
                             }
                                 //while index>5 but indexTwo <10
-                            else if (index > 5)
+                            else if (index >= 5)
                             {
                                 Console.WriteLine("First Class is full. Check for a seat in Economy Class?");
                                 Console.WriteLine("Choose 1 for Economy Class or 2 to Exit program");
@@ -70,6 +73,7 @@ namespace Airplane_Seating
                             {
                                 seats[indexTwo] = true;
                                 indexTwo++;
+                                choice = 0;
                             }
                             else if (index > 5 && indexTwo > 10)
                             {

@@ -80,18 +80,19 @@ namespace Arrays
 
                 }
             }
-
-            Console.WriteLine("02: {0}", rolls[0]);
-            Console.WriteLine("03: {0}", rolls[1]);
-            Console.WriteLine("04: {0}", rolls[2]);
-            Console.WriteLine("05: {0}", rolls[3]);
-            Console.WriteLine("06: {0}", rolls[4]);
-            Console.WriteLine("07: {0}", rolls[5]);
-            Console.WriteLine("08: {0}", rolls[6]);
-            Console.WriteLine("09: {0}", rolls[7]);
-            Console.WriteLine("10: {0}", rolls[8]);
-            Console.WriteLine("11: {0}", rolls[9]);
-            Console.WriteLine("12: {0}", rolls[10]);
+            Console.WriteLine(" Each number is displayed with the");
+            Console.WriteLine(" number of times it was rolled:");
+            Console.WriteLine(" 02: {0,4}", rolls[0]);
+            Console.WriteLine(" 03: {0,3}", rolls[1]);
+            Console.WriteLine(" 04: {0,3}", rolls[2]);
+            Console.WriteLine(" 05: {0,3}", rolls[3]);
+            Console.WriteLine(" 06: {0,3}", rolls[4]);
+            Console.WriteLine(" 07: {0,3}", rolls[5]);
+            Console.WriteLine(" 08: {0,3}", rolls[6]);
+            Console.WriteLine(" 09: {0,3}", rolls[7]);
+            Console.WriteLine(" 10: {0,3}", rolls[8]);
+            Console.WriteLine(" 11: {0,3}", rolls[9]);
+            Console.WriteLine(" 12: {0,4}", rolls[10]);
 
             Console.ReadKey();
 

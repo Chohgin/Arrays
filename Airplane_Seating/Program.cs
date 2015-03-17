@@ -16,6 +16,8 @@ namespace Airplane_Seating
             int choice = 0;
             while (choice != 3)
             {
+                if (choice == 0)
+                { 
             //Menu
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("Welcome to Middle of Nowhere flights automated reservation system.");
@@ -25,6 +27,13 @@ namespace Airplane_Seating
             Console.WriteLine("3. Exit");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             choice = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            }
             
                 //Switch for initial choice
                 switch (choice)
@@ -39,9 +48,12 @@ namespace Airplane_Seating
                                 index++;
                                 choice = 0;
                             }
-                            else if (index >5 && indexTwo > 10)
+                            else if (index >=5 && indexTwo >= 10)
                             {
                                 Console.WriteLine("Both classes are full. The next flight leaves in three hours.");
+                                Console.WriteLine("Press any key to exit.");
+
+                                Console.ReadKey();
                                 choice = 3;
                             }
                                 //while index>5 but indexTwo <10
@@ -71,16 +83,20 @@ namespace Airplane_Seating
                         {
                             if (indexTwo < 10)
                             {
+                                Console.WriteLine("Thank you for choosing Economy Class");
                                 seats[indexTwo] = true;
                                 indexTwo++;
                                 choice = 0;
                             }
-                            else if (index > 5 && indexTwo > 10)
+                            else if (index >= 5 && indexTwo >= 10)
                             {
                                 Console.WriteLine("Both classes are full. The next flight leaves in three hours.");
+                                Console.WriteLine("Press any key to exit.");
+
+                                Console.ReadKey();
                                 choice = 3;
                             }
-                            else if (index > 10)
+                            else if (index >= 10)
                             {
                                 Console.WriteLine("Economy Class is full. Check for a seat in First Class?");
                                 Console.WriteLine("Choose 1 for First Class or 2 to Exit program");
